@@ -2,7 +2,7 @@
 
 **BUS 32130: Data Visualization for Decision-Making \- Final Project**
 
-### **📊 [Link to Tableau Dashboard](http://docs.google.com/Insert_Your_Tableau_Public_Link_Here)**
+### **📊 [Link to Tableau Dashboard](https://us-east-1.online.tableau.com/#/site/boothdataviz/views/FinalProjectDashboardLinaSaiHamza/Dashboard2?:iid=1)**
 
 ## **Executive Summary**
 
