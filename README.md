@@ -39,6 +39,16 @@ To ensure the integrity of the analysis, the raw transactional dataset underwent
 3. **Feature Engineering:** Created a Transaction Value field by multiplying Quantity by UnitPrice.  
 4. **Data Aggregation:** The raw data was structured at the line-item level. We aggregated this data first to the transaction level (using InvoiceNo) and then to the customer level (using CustomerID) to create our primary analytical metrics: *First Purchase Value*, *Total Customer Value*, *Purchase Frequency*, *First Basket Variety*, and *Time to Second Purchase*.
 
+## Principles of Good Design
+To ensure this dashboard functions as an effective, standalone executive tool, every visual element was intentionally designed utilizing established data visualization principles:
+
+* **Typeface Selection (Sans-Serif):** We utilized a clean, sans-serif typeface (Benton Sans Book) across the entire dashboard. Sans-serif fonts are optimized for digital screens and maintain high legibility at smaller sizes, which is critical for reading dense axis labels and KPI numbers. The typographic hierarchy is strictly controlled: large, bold weights for primary KPIs and active titles, and lighter, smaller weights for secondary axis labels to prevent visual crowding.
+* **Strategic Color Theory:** Rather than using a distracting categorical color palette or a continuous gradient that dilutes focus, we applied a **highlighting color strategy**. Neutral grays are used as the baseline for the bar charts, while our primary accent color (Dark Red) is applied exclusively to the highest-value cohorts. This leverages *preattentive visual processing*, instantly guiding the viewer's eye to the most critical insights without requiring them to consciously scan the entire chart. 
+* **Gestalt Principles Applied:**
+  * **Law of Proximity:** The high-level KPI cards are grouped closely together at the top of the dashboard to establish them as a single, cohesive summary unit.
+  * **Law of Simplicity:** We conducted a rigorous "clutter audit," stripping away unnecessary borders, background shading, and heavy gridlines. Instead of using drawn boxes, we used negative space (whitespace) to naturally separate the three charts.
+* **Standalone Visual Communication:** To ensure the visuals can be understood without narration, we replaced traditional, passive chart titles with **active headings** that state the exact business conclusion (e.g., "Larger First Baskets Increase Retention Rates"). Furthermore, redundant Y-axes were removed in favor of **direct data labels** on the bars, eliminating the cognitive friction of forcing the user's eyes to bounce back and forth across the screen to interpret the data.
+
 ## **Assumptions**
 
 * **Defining Retention:** Because there is no formal account cancellation data, customer retention is strictly measured through repeat purchasing behavior. A "repeat customer" is defined as any CustomerID associated with more than one unique InvoiceNo on separate dates.  
